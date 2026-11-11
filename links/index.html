@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Noah Builds</title>
+<meta name="description" content="Minecraft builds by Noah. Building with Regi in the EthicBuilds build team.">
+<meta name="theme-color" content="#2f6fd0">
+<meta property="og:title" content="Noah Builds">
+<meta property="og:description" content="Building with Regi in the EthicBuilds build team.">
+<meta property="og:image" content="https://noahbuildsmc.github.io/noahbuilds/links/og.jpg">
+<meta property="og:url" content="https://noahbuildsmc.github.io/noahbuilds/links/">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="apple-touch-icon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="bricolage.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="trailer.webp" as="image" media="(max-width: 899px)">
+<link rel="preload" href="trailer-hd.webp" as="image" media="(min-width: 900px)">
+<style>
+@font-face { font-family: 'Bricolage Grotesque'; font-style: normal; font-weight: 400 800; font-stretch: 75% 100%; font-display: swap; src: url(bricolage.woff2) format('woff2'); }
+:root { --sky: #4f94f2; --blue: #2f6fd0; --deep: #1c4a9e; --night: #0f2c63; --gold: #f4b63f; --ink: #fff; --soft: rgba(255, 255, 255, .78); }
+* { box-sizing: border-box; }
+html { background: var(--night); }
+body { margin: 0; min-height: 100vh; min-height: 100dvh; color: var(--ink); font: 500 16px/1.45 'Bricolage Grotesque', system-ui, sans-serif;
+  background: radial-gradient(120% 70% at 50% 18%, var(--sky) 0%, var(--blue) 42%, var(--deep) 72%, var(--night) 100%) fixed; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+a { color: inherit; }
+main { position: relative; z-index: 1; width: min(100%, 460px); margin: 0 auto; padding: 0 18px calc(40px + env(safe-area-inset-bottom)); }
+
+.hero { position: relative; height: min(124vw, 560px); margin: 0 -18px; overflow: hidden; container-type: inline-size; }
+.word { position: absolute; left: 0; right: 0; top: 7%; margin: 0; text-align: center; font-size: min(46vw, 212px); font-size: min(46cqi, 212px); font-weight: 800; font-stretch: 75%; letter-spacing: -.01em; line-height: .8;
+  transform: scaleY(1.3); transform-origin: 50% 0; color: transparent; white-space: nowrap; user-select: none;
+  background: linear-gradient(180deg, #fff 30%, rgba(255, 255, 255, .5) 70%, rgba(255, 255, 255, 0) 100%); -webkit-background-clip: text; background-clip: text; }
+.noah { position: absolute; left: 50%; bottom: 0; width: min(100%, 600px); height: auto; translate: -50% 0; aspect-ratio: 600 / 624; background: center / contain no-repeat;
+  -webkit-mask-image: linear-gradient(180deg, #000 78%, transparent 100%); mask-image: linear-gradient(180deg, #000 78%, transparent 100%); }
+
+.id { text-align: center; margin-top: -6px; position: relative; }
+h1 { margin: 0; font-size: 40px; font-weight: 800; font-stretch: 80%; letter-spacing: -.03em; line-height: 1; }
+.handle { margin: 6px 0 0; color: var(--soft); font-size: 15px; }
+.bio { margin: 14px auto 0; max-width: 30ch; font-size: 18px; line-height: 1.35; }
+
+.links { display: grid; gap: 10px; margin-top: 26px; padding: 0; list-style: none; }
+.btn { display: grid; grid-template-columns: 44px minmax(0, 1fr) 20px; align-items: center; gap: 14px; min-height: 64px; padding: 10px 16px 10px 10px; border-radius: 20px; text-decoration: none;
+  background: linear-gradient(180deg, rgba(255, 255, 255, .2), rgba(255, 255, 255, .1)), rgba(16, 40, 92, .35); border: 1px solid rgba(255, 255, 255, .22); box-shadow: inset 0 1px 0 rgba(255, 255, 255, .25), 0 12px 30px -18px rgba(5, 20, 55, .8);
+  transition: transform .2s cubic-bezier(.2, .7, .2, 1), background .2s; }
+.btn:hover { background: linear-gradient(180deg, rgba(255, 255, 255, .28), rgba(255, 255, 255, .16)), rgba(16, 40, 92, .35); transform: translateY(-2px); }
+.btn:active { transform: scale(.98); }
+.btn:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+.btn b { display: block; font-size: 17px; font-weight: 700; }
+.btn small { display: block; color: var(--soft); font-size: 13.5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.ico { width: 44px; height: 44px; border-radius: 13px; display: grid; place-items: center; background: var(--c); color: var(--on, #fff); }
+.ico svg { width: 24px; height: 24px; fill: currentColor; }
+.go { width: 20px; height: 20px; fill: none; stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; opacity: .7; }
+
+.patreon { min-height: 76px; border: 0; color: #2b1d02; background: linear-gradient(180deg, #ffd884, var(--gold) 60%, #e9a527);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .7), 0 16px 34px -14px rgba(244, 182, 63, .85); }
+.patreon:hover { background: linear-gradient(180deg, #ffe09a, #f7c055 60%, #eeae33); }
+.patreon b { font-size: 19px; }
+.patreon small { color: rgba(43, 29, 2, .72); }
+.patreon .ico { --c: #2b1d02; --on: var(--gold); }
+
+.yt { --c: #ff3b3b; } .ig { --c: linear-gradient(135deg, #feda75, #fa7e1e 30%, #d62976 60%, #962fbf 85%); } .tt { --c: #111; } .fb { --c: #1877f2; } .pin { --c: #e60023; } .pmc { --c: #2f8f46; }
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .word { animation: word 1s cubic-bezier(.2, .7, .2, 1) both; }
+  .noah { animation: noah 1s .15s cubic-bezier(.2, .8, .2, 1) both; }
+  .id, .links li { animation: up .6s cubic-bezier(.2, .7, .2, 1) both; animation-delay: calc(.45s + var(--i, 0) * 60ms); }
+}
+@keyframes word { from { opacity: 0; transform: scaleY(1.3) translateY(18px); } }
+@keyframes noah { from { opacity: 0; translate: -50% 40px; } }
+@keyframes up { from { opacity: 0; transform: translateY(12px); } }
+@media (min-width: 700px) { main { padding-top: 24px; } }
+@media (min-width: 900px) {
+  body { background: radial-gradient(80% 95% at 30% 50%, var(--sky) 0%, var(--blue) 38%, var(--deep) 70%, var(--night) 100%) fixed; }
+  main { width: 100%; min-height: 100vh; min-height: 100dvh; display: grid; grid-template-columns: minmax(0, 1fr) minmax(400px, min(34vw, 600px)); grid-template-rows: 1fr auto auto 1fr;
+    column-gap: clamp(32px, 4vw, 80px); padding: 32px clamp(48px, 14vw, 340px) 32px clamp(16px, 3vw, 72px); }
+  .hero { grid-column: 1; grid-row: 1 / -1; align-self: center; height: min(92vh, 1320px); margin: 0; overflow: visible; }
+  .word { left: -4%; right: -4%; top: 4%; font-size: min(61cqi, 860px); }
+  .noah { left: 46%; bottom: -4%; width: min(116%, 1500px); }
+  .id { grid-column: 2; grid-row: 2; text-align: left; margin: 0; }
+  h1 { font-size: clamp(56px, 4.4vw, 84px); }
+  .handle { font-size: 17px; }
+  .bio { margin: 16px 0 0; max-width: 34ch; font-size: clamp(20px, 1.3vw, 24px); }
+  .links { grid-column: 2; grid-row: 3; gap: 12px; margin-top: 30px; }
+  .btn { grid-template-columns: 54px minmax(0, 1fr) 22px; gap: 16px; min-height: 78px; padding: 12px 20px 12px 12px; border-radius: 22px; }
+  .btn b { font-size: 19px; }
+  .btn small { font-size: 14.5px; }
+  .ico { width: 54px; height: 54px; border-radius: 15px; }
+  .ico svg { width: 28px; height: 28px; }
+  .patreon { min-height: 90px; }
+  .patreon b { font-size: 22px; }
+}
+@media (min-width: 900px) and (max-height: 940px) {
+  main { padding-block: 12px; }
+  h1 { font-size: 52px; }
+  .bio { margin-top: 10px; font-size: 18px; }
+  .links { gap: 8px; margin-top: 18px; }
+  .btn { grid-template-columns: 44px minmax(0, 1fr) 20px; min-height: 58px; padding-block: 7px; }
+  .ico { width: 44px; height: 44px; }
+  .ico svg { width: 24px; height: 24px; }
+  .patreon { min-height: 66px; }
+}
+/* Grafiken nicht kopierbar für normale Besucher */
+.hero, .sky { -webkit-touch-callout: none; -webkit-user-select: none; user-select: none; }
+
+/* Himmel nach Tageszeit, Block-Wolken */
+html.morning { --sky: #ffc58a; --blue: #8fb6ea; --deep: #4f74c4; --night: #2a3f7e; }
+html.evening { --sky: #ff9f6a; --blue: #c0628f; --deep: #5a3b8e; --night: #1f1d4f; }
+html.night { --sky: #2c4f96; --blue: #1a2f66; --deep: #101d45; --night: #070d22; }
+.sky { position: fixed; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
+.cloud { position: absolute; left: 0; height: 18px; background: rgba(255, 255, 255, .78); box-shadow: var(--b); opacity: var(--o, .75); }
+html.night .cloud { opacity: .14; }
+@media (prefers-reduced-motion: no-preference) { .cloud { animation: drift var(--t, 160s) linear infinite; animation-delay: var(--d, 0s); } }
+@keyframes drift { from { transform: translateX(-30vw); } to { transform: translateX(130vw); } }
+.star { position: absolute; width: 3px; height: 3px; background: #fff; opacity: .7; }
+html:not(.night) .star { display: none; }
+
+/* Intro am Desktop: Axtschlag, dann baut sich der Schriftzug auf */
+.intro .word { opacity: 0; animation: none; }
+.intro.hit .word { opacity: 1; animation: build .55s steps(9, end) both; }
+@keyframes build { from { clip-path: circle(0% at var(--hx, 70%) 95%); } to { clip-path: circle(150% at var(--hx, 70%) 95%); } }
+.intro.hit .hero { animation: shake .32s cubic-bezier(.36, .07, .19, .97); }
+@keyframes shake { 20% { translate: -6px 3px; } 40% { translate: 5px -2px; } 60% { translate: -3px 2px; } 80% { translate: 2px -1px; } }
+.flash { position: absolute; width: 260px; height: 260px; margin: -130px 0 0 -130px; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(circle, rgba(255, 244, 214, .95), rgba(255, 214, 120, .35) 40%, transparent 70%); animation: flash .45s ease-out forwards; }
+@keyframes flash { from { transform: scale(.2); opacity: 1; } to { transform: scale(1.6); opacity: 0; } }
+.chip { position: absolute; width: var(--s); height: var(--s); background: var(--c); box-shadow: inset -3px -3px 0 rgba(0, 0, 0, .25); pointer-events: none;
+  animation: chip .9s cubic-bezier(.2, .6, .4, 1) forwards; }
+@keyframes chip { to { transform: translate(var(--x), var(--y)) rotate(var(--r)); opacity: 0; } }
+/* Baugerüst: Villager setzen bei jedem Hammerschlag einen Bambusblock unter sich (nur Desktop) */
+.scf { position: absolute; inset: 0; pointer-events: none; z-index: 0; }
+.scf i { position: absolute; display: block; background: center bottom / 100% 100% no-repeat; }
+.scf .vil { background-size: 600% 800%; }
+.scf { transition: opacity .6s; }
+.scf.gone { opacity: 0; }
+.scf .blk { background-image: url(block.webp); transform-origin: 50% 100%; }
+.scf .blk.pop { animation: blk .22s cubic-bezier(.2, 1.4, .4, 1) both; }
+@keyframes blk { from { transform: scale(.3); opacity: 0; } }
+.scf .vil { transition: transform .16s cubic-bezier(.3, 1.5, .5, 1); }
+main > .links, main > .id { position: relative; z-index: 1; }
+.links.build li { animation: none; opacity: 0; transform: translateY(10px) scale(.9); }
+.links.build li.in { opacity: 1; transform: none; animation: bub .5s cubic-bezier(.2, 1.5, .4, 1) both; }
+@keyframes bub { 0% { opacity: 0; transform: translateY(10px) scale(.6); } 60% { opacity: 1; } }
+
+/* Mauszeiger als Holzaxt, Block-Splitter beim Klick */
+@media (hover: hover) and (pointer: fine) {
+  html, a, button { cursor: url(cursor-axe.png) 12 6, auto; }
+  a { cursor: url(cursor-axe.png) 12 6, pointer; }
+}
+.spark { position: fixed; width: 8px; height: 8px; background: var(--c); pointer-events: none; z-index: 9; animation: chip .55s cubic-bezier(.2, .6, .4, 1) forwards; }
+</style>
+</head>
+<body>
+<div class="sky" id="sky" aria-hidden="true"></div>
+<main>
+  <div class="hero" aria-hidden="true">
+    <p class="word">NOAH</p>
+    <div class="noah" id="noah"></div>
+  </div>
+
+  <header class="id">
+    <h1>Noah Builds</h1>
+    <p class="handle">@noahbuildsmc</p>
+    <p class="bio">Building with Regi in the EthicBuilds build team.</p>
+  </header>
+
+  <ul class="links">
+    <li style="--i:1"><a target="_blank" rel="noopener" class="btn patreon" id="patreon" href="https://www.patreon.com/cw/Regisseur_?utm_source=linkpage&amp;utm_medium=bio">
+      <span class="ico"><svg viewBox="0 0 24 24"><circle cx="14.5" cy="9.5" r="6"/><rect x="3.5" y="3.5" width="3.6" height="17" rx="1"/></svg></span>
+      <span><b>Join on Patreon</b><small>With Regi and the EthicBuilds team</small></span>
+      <svg class="go" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></a></li>
+    <li style="--i:2"><a target="_blank" rel="noopener" class="btn" href="https://www.youtube.com/@noahbuildsmc">
+      <span class="ico yt"><svg viewBox="0 0 24 24"><path d="M9 7.5v9l8-4.5Z"/></svg></span>
+      <span><b>YouTube</b><small>@noahbuildsmc</small></span><svg class="go" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></a></li>
+    <li style="--i:3"><a target="_blank" rel="noopener" class="btn" href="https://www.instagram.com/noahbuildsmc/">
+      <span class="ico ig"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="5" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="12" cy="12" r="3.6" fill="none" stroke="currentColor" stroke-width="2.2"/><circle cx="16.6" cy="7.4" r="1.2"/></svg></span>
+      <span><b>Instagram</b><small>@noahbuildsmc</small></span><svg class="go" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></a></li>
+    <li style="--i:4"><a target="_blank" rel="noopener" class="btn" href="https://www.tiktok.com/@noahbuilds.mc">
+      <span class="ico tt"><svg viewBox="0 0 24 24"><path d="M13 3.5h3.2a4.3 4.3 0 0 0 3.8 3.8v3.1a7.4 7.4 0 0 1-3.8-1.1v6.2a5.6 5.6 0 1 1-5.6-5.6h.6v3.2h-.6a2.4 2.4 0 1 0 2.4 2.4Z"/></svg></span>
+      <span><b>TikTok</b><small>@noahbuilds.mc</small></span><svg class="go" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></a></li>
+    <li style="--i:5"><a target="_blank" rel="noopener" class="btn" href="https://www.facebook.com/1476133575563751">
+      <span class="ico fb"><svg viewBox="0 0 24 24"><path d="M13.4 20.5v-7h2.5l.4-3h-2.9V8.7c0-.9.3-1.4 1.5-1.4h1.5V4.6a19 19 0 0 0-2.2-.1c-2.3 0-3.8 1.4-3.8 3.9v2.1H8v3h2.4v7Z"/></svg></span>
+      <span><b>Facebook</b><small>NoahBuilds Minecraft Builds</small></span><svg class="go" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></a></li>
+    <li style="--i:6"><a target="_blank" rel="noopener" class="btn" href="https://www.pinterest.com/noahbuildsmc/">
+      <span class="ico pin"><svg viewBox="0 0 24 24"><path d="M12.3 3.5c-4.6 0-7 3.1-7 5.8 0 1.6.6 3 1.9 3.5.2.1.4 0 .5-.2l.2-.8c.1-.2 0-.3-.1-.5-.4-.5-.6-1.1-.6-1.9 0-2.5 1.9-4.7 4.8-4.7 2.6 0 4.1 1.6 4.1 3.8 0 2.8-1.3 5.2-3.1 5.2-1 0-1.8-.8-1.5-1.9.3-1.2.9-2.6.9-3.5 0-.8-.4-1.5-1.4-1.5-1.1 0-2 1.1-2 2.7 0 1 .3 1.6.3 1.6l-1.4 5.7c-.3 1.4 0 3.2 0 3.4h.2c.2-.2 1.5-1.8 1.9-3.4l.7-2.7c.4.7 1.4 1.3 2.5 1.3 3.3 0 5.6-3 5.6-7.1 0-3-2.6-5.9-6.5-5.9Z"/></svg></span>
+      <span><b>Pinterest</b><small>@noahbuildsmc</small></span><svg class="go" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></a></li>
+    <li style="--i:7"><a target="_blank" rel="noopener" class="btn" href="https://www.planetminecraft.com/member/noahbuilds/">
+      <span class="ico pmc"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="5.6"/><ellipse cx="12" cy="12" rx="10" ry="3.4" fill="none" stroke="currentColor" stroke-width="1.8" transform="rotate(-20 12 12)"/></svg></span>
+      <span><b>Planet Minecraft</b><small>Free schematics to download</small></span><svg class="go" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></svg></a></li>
+  </ul>
+
+</main>
+<script>
+// Patreon link carries where the visitor came from, e.g. ?from=instagram
+var f = (new URLSearchParams(location.search).get('from') || 'linkpage').toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 30) || 'linkpage';
+document.getElementById('patreon').href = 'https://www.patreon.com/cw/Regisseur_?utm_source=' + f + '&utm_medium=bio';
+
+// Anonymous count of visits and button clicks: no cookies, no IP stored
+(function () {
+  var q = new URLSearchParams(location.search).get('from'), src = 'direkt';
+  if (q) src = q;
+  else if (document.referrer) {
+    try {
+      var host = new URL(document.referrer).hostname.replace(/^(www|m|l|lm|out)\./, '');
+      if (host !== location.hostname) src = host.split('.').slice(-2, -1)[0] || host;
+    } catch (e) { }
+  }
+  src = String(src).toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 24) || 'direkt';
+  var dev = matchMedia('(pointer: coarse)').matches ? 'm' : 'd';
+  function send(o) {
+    o.f = src; o.g = dev;
+    try { navigator.sendBeacon('https://ethiclabs.tail3fed5b.ts.net/klick', new Blob([JSON.stringify(o)], { type: 'text/plain' })); } catch (e) { }
+  }
+  send({ e: 'besuch' });
+  var ids = { patreon: 'patreon', youtube: 'youtube', instagram: 'instagram', tiktok: 'tiktok', facebook: 'facebook', pinterest: 'pinterest', planetminecraft: 'planetminecraft' };
+  function hit(ev) {
+    var a = ev.target.closest && ev.target.closest('a.btn');
+    if (!a || (ev.type === 'auxclick' && ev.button !== 1)) return;
+    var h = a.hostname.replace(/^www\./, '').split('.')[0];
+    send({ e: 'klick', b: ids[h] || 'andere' });
+  }
+  document.addEventListener('click', hit);
+  document.addEventListener('auxclick', hit);
+})();
+
+// Sky follows the visitor's clock: morning, day, evening, night
+var hr = new Date().getHours(), root = document.documentElement;
+root.classList.add(hr >= 5 && hr < 10 ? 'morning' : hr >= 10 && hr < 17 ? 'day' : hr >= 17 && hr < 21 ? 'evening' : 'night');
+var parts = '';
+function blocks() {
+  var b = [], x = 0, n = 2 + Math.floor(Math.random() * 4);
+  for (var i = 0; i < n; i++) { b.push(x + 'px ' + (i % 2 ? -18 : 0) + 'px 0 rgba(255,255,255,.78)'); x += 36; }
+  return b.join(',');
+}
+for (var i = 0; i < 7; i++) parts += '<i class="cloud" style="top:' + (6 + Math.random() * 46).toFixed(1) + '%;width:' + (72 + Math.floor(Math.random() * 5) * 36) + 'px;--o:' + (.35 + Math.random() * .45).toFixed(2) + ';--t:' + (150 + Math.random() * 120 | 0) + 's;--d:-' + (Math.random() * 220 | 0) + 's;--b:' + blocks() + '"></i>';
+for (var j = 0; j < 40; j++) parts += '<i class="star" style="left:' + (Math.random() * 100).toFixed(1) + '%;top:' + (Math.random() * 60).toFixed(1) + '%"></i>';
+document.getElementById('sky').innerHTML = parts;
+
+// No right click, drag or long press on the graphics; links keep working
+document.addEventListener('contextmenu', function (e) { if (!e.target.closest('a')) e.preventDefault(); });
+document.addEventListener('dragstart', function (e) { if (!e.target.closest('a')) e.preventDefault(); });
+
+// Trailer as CSS background. Desktop intro once per visit: the word builds up when the axe hits
+var HIT = 3540;  // ms after start: frame 85 of 144 at 24 fps, the forward axe strike in trailer.webp
+var noah = document.getElementById('noah');
+var wide = matchMedia('(min-width: 900px)').matches, calm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+var seen = false;
+try { seen = !!sessionStorage.getItem('intro'); } catch (e) {}
+var intro = wide && !calm && !seen;
+if (intro) document.body.classList.add('intro');
+var clip = wide ? 'trailer-hd.webp' : 'trailer.webp';
+var pic = new Image();
+pic.onload = function () {
+  noah.style.backgroundImage = 'url(' + clip + ')';
+  if (!intro) return;
+  try { sessionStorage.setItem('intro', '1'); } catch (e) {}
+  setTimeout(hit, HIT);
+};
+pic.onerror = function () { document.body.classList.add('hit'); };
+pic.src = clip;
+
+function hit() {
+  var hero = document.querySelector('.hero'), r = noah.getBoundingClientRect(), hb = hero.getBoundingClientRect();
+  var x = r.left - hb.left + r.width * .72, y = r.top - hb.top + r.height * .6;
+  hero.style.setProperty('--hx', (x / hb.width * 100).toFixed(1) + '%');
+  document.body.classList.add('hit');
+  var fl = document.createElement('i');
+  fl.className = 'flash'; fl.style.left = x + 'px'; fl.style.top = y + 'px';
+  hero.appendChild(fl);
+  var cols = ['#8a5a2b', '#b5823f', '#6b4a24', '#5c8a3a', '#f4b63f', '#d8c08a'];
+  for (var k = 0; k < 22; k++) {
+    var c = document.createElement('i'), a = Math.random() * Math.PI * 2, d = 80 + Math.random() * 200;
+    c.className = 'chip';
+    c.style.cssText = 'left:' + x + 'px;top:' + y + 'px;--s:' + (8 + Math.random() * 12 | 0) + 'px;--c:' + cols[k % cols.length] + ';--x:' + (Math.cos(a) * d | 0) + 'px;--y:' + ((Math.sin(a) * d * .6 + 120) | 0) + 'px;--r:' + (Math.random() * 360 | 0) + 'deg';
+    hero.appendChild(c);
+  }
+  setTimeout(function () { hero.querySelectorAll('.flash,.chip').forEach(function (n) { n.remove(); }); }, 1200);
+}
+
+// Scaffolding, desktop only, on every page load: each villager stands on its tower. The hammer frames are stepped here,
+// so every block appears exactly on a hit: vA strikes on frames 6, 18, 30, 42, vB on 12, 24, 36, 48.
+// The link buttons pop in one by one when a villager reaches their height.
+(function () {
+  if (!matchMedia('(min-width: 1100px)').matches) return;
+  var main = document.querySelector('main'), links = document.querySelector('.links');
+  var layer = document.createElement('div'); layer.className = 'scf'; layer.setAttribute('aria-hidden', 'true');
+  if (calm) return;
+  main.appendChild(layer);
+  var V = [{ name: 'vA', dir: 1, hit: 6 }, { name: 'vB', dir: -1, hit: 12 }];
+  var B, N, base, towers, raf = 0, FPS = 28;
+  var items = [].slice.call(links.children);
+  links.classList.add('build');
+  function show(all) {
+    var m = main.getBoundingClientRect(), top = Math.max.apply(null, V.map(function (v) { return v.h || 0; }));
+    items.forEach(function (li) {
+      var r = li.getBoundingClientRect();
+      if (all || r.top + r.height / 2 - m.top >= base - top * B) li.classList.add('in');
+    });
+  }
+  function done() { show(true); }
+  var safety = setTimeout(done, 2500);  // images slow or missing: never hide the links
+  function measure() {
+    var m = main.getBoundingClientRect(), l = links.getBoundingClientRect();
+    B = Math.round(Math.max(32, Math.min(54, l.height / 11)));
+    N = Math.max(4, Math.floor(l.height / B));
+    base = l.bottom - m.top;
+    var gap = Math.max(10, B * .3);
+    towers = [l.left - m.left - gap - B, l.right - m.left + gap];
+  }
+  function block(t, k, pop) {
+    var b = document.createElement('i');
+    b.className = 'blk' + (pop ? ' pop' : '');
+    b.style.cssText = 'left:' + towers[t] + 'px;top:' + (base - (k + 1) * B - B * .25) + 'px;width:' + B + 'px;height:' + (B * 1.25) + 'px';
+    layer.appendChild(b);
+  }
+  function frame(v, f) {
+    v.el.style.backgroundPosition = (f % 6) * 20 + '% ' + Math.floor(f / 6) * (100 / 7) + '%';
+  }
+  function build() {
+    clearTimeout(raf);
+    layer.textContent = '';
+    measure();
+    V.forEach(function (v, t) {
+      v.h = 1;
+      for (var k = 0; k < v.h; k++) block(t, k, false);
+      var s = B * 3.6, cx = towers[t] + B / 2 - v.dir * B * .3;
+      v.el = document.createElement('i'); v.el.className = 'vil';
+      v.el.style.cssText = 'left:' + (cx - s / 2) + 'px;top:' + (base - s * .93) + 'px;width:' + s + 'px;height:' + s + 'px;background-image:url(' + v.name + '-sheet.webp);transform:translateY(' + (-v.h * B) + 'px)';
+      layer.appendChild(v.el);
+      frame(v, v.hit);
+    });
+  }
+  function start() {
+    clearTimeout(safety);
+    build();
+    show();
+    var t0 = performance.now(), last = -1;
+    (function step() {
+      var n = Math.floor((performance.now() - t0) / (1000 / FPS)), busy = false;
+      if (n !== last) {
+        for (var f = last + 1; f <= n; f++) V.forEach(function (v, t) {
+          if (v.h >= N) return;
+          if (f >= v.hit && (f - v.hit) % 12 === 0) {
+            block(t, v.h, true);
+            v.h++;
+            setTimeout(function () { v.el.style.transform = 'translateY(' + (-v.h * B) + 'px)'; show(); }, 80);
+          }
+        });
+        last = n;
+        V.forEach(function (v) { if (v.h < N) { frame(v, n % 48); busy = true; } else frame(v, v.hit); });
+      } else busy = V.some(function (v) { return v.h < N; });
+      if (busy) raf = setTimeout(step, 1000 / FPS);
+      else { done(); setTimeout(function () { layer.classList.add('gone'); setTimeout(function () { layer.remove(); }, 700); }, 900); }
+    })();
+  }
+  var n = 0, ok = function () { if (++n === 3) start(); };
+  ['vA-sheet.webp', 'vB-sheet.webp', 'block.webp'].forEach(function (src) { var im = new Image(); im.onload = ok; im.src = src; });
+  addEventListener('resize', function () { clearTimeout(raf); layer.remove(); done(); }, { once: true });
+})();
+
+// Click with the axe: a few block chips fly off
+if (matchMedia('(hover: hover) and (pointer: fine)').matches && !calm) {
+  document.addEventListener('pointerdown', function (e) {
+    var cols = ['#8a5a2b', '#b5823f', '#5c8a3a', '#d8c08a'];
+    for (var k = 0; k < 6; k++) {
+      var s = document.createElement('i'), a = Math.random() * Math.PI * 2, d = 20 + Math.random() * 30;
+      s.className = 'spark';
+      s.style.cssText = 'left:' + (e.clientX - 4) + 'px;top:' + (e.clientY - 4) + 'px;--c:' + cols[k % 4] + ';--x:' + (Math.cos(a) * d | 0) + 'px;--y:' + ((Math.sin(a) * d + 24) | 0) + 'px;--r:' + (Math.random() * 360 | 0) + 'deg';
+      document.body.appendChild(s);
+      setTimeout(function (n) { n.remove(); }, 600, s);
+    }
+  });
+}
+</script>
+</body>
+</html>
