@@ -206,6 +206,9 @@ document.getElementById('patreon').href = 'https://www.patreon.com/cw/Regisseur_
     } catch (e) { }
   }
   src = String(src).toLowerCase().replace(/[^a-z0-9_-]/g, '').slice(0, 24) || 'direkt';
+  var me = new URLSearchParams(location.search).get('ich');
+  try { if (me === '1') localStorage.setItem('eigen', '1'); if (me === '0') localStorage.removeItem('eigen'); } catch (e) { }
+  try { if (localStorage.getItem('eigen')) return; } catch (e) { }
   var dev = matchMedia('(pointer: coarse)').matches ? 'm' : 'd';
   function send(o) {
     o.f = src; o.g = dev;
